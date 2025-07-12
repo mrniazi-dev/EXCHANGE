@@ -1,0 +1,96 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FIXERCOIN Local Exchange</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="app-container">
+        <!-- ================================= -->
+        <!--      AUTHENTICATION VIEW          -->
+        <!-- ================================= -->
+        <div id="auth-view">
+            <header>
+                <img src="images/logo.png" alt="FIXERCOIN Logo" class="logo">
+                <h1>Welcome to FIXERCOIN</h1>
+            </header>
+            
+            <!-- Login Form -->
+            <div id="login-form" class="auth-form">
+                <h2>Sign In</h2>
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button id="login-btn">Sign In</button>
+                <p class="auth-switch">Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+                <p class="auth-switch"><a href="#" id="forgot-password">Forgot Password?</a></p>
+            </div>
+
+            <!-- Signup Form -->
+            <div id="signup-form" class="auth-form hidden">
+                <h2>Create Account</h2>
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <button id="signup-btn">Sign Up</button>
+                <p class="auth-switch">Already have an account? <a href="#" id="show-login">Sign In</a></p>
+            </div>
+        </div>
+
+        <!-- ================================= -->
+        <!--         MAIN APP VIEW             -->
+        <!-- ================================= -->
+        <div id="app-view" class="hidden">
+            <header class="app-header">
+                <h1>FIXERCOIN Exchange</h1>
+                <button id="logout-btn">Log Out</button>
+            </header>
+
+            <main>
+                <div class="market-info-section">
+                    <div class="info-box">
+                        <span class="info-label">Current Price</span>
+                        <span id="current-price" class="info-value">0.0001 PKR</span>
+                    </div>
+                </div>
+
+                <div class="wallet-section">
+                    <h2>My Wallet</h2>
+                    <div class="balance-row">
+                        <span>PKR Balance:</span>
+                        <span id="pkr-balance">0.00</span>
+                    </div>
+                    <div class="balance-row">
+                        <span>FIXER Balance:</span>
+                        <span id="fixer-balance">0.00</span>
+                    </div>
+                </div>
+
+                <div class="trade-section">
+                    <h2>Trade</h2>
+                    <div class="trade-form">
+                        <label for="amount-input">Amount (FIXER)</label>
+                        <input type="number" id="amount-input" placeholder="e.g., 50000">
+                        <div class="trade-buttons">
+                            <button id="buy-btn" class="buy">Buy FIXER</button>
+                            <button id="sell-btn" class="sell">Sell FIXER</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-section">
+                    <h2>Price Chart (Visual Simulation)</h2>
+                    <div class="chart-placeholder">
+                        <div id="price-history" class="price-history"></div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <footer>
+            <p class="warning">Warning: This is a non-functional blueprint. Do not use real passwords.</p>
+        </footer>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
